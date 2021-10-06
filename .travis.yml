@@ -5,5 +5,5 @@ install:
   - echo Hello
   - wget https://github.com/github/codeql-action/releases/latest/download/codeql-runner-linux
   - chmod +x codeql-runner-linux
-  - echo "$GITHUBTOKEN" | codeql-runner-linux init --repository hassank-mapbox/testrepo --github-url https://github.com --github-auth-stdin
+  - echo "$GITHUBTOKEN" | ./codeql-runner-linux init --repository hassank-mapbox/testrepo --github-url https://github.com --github-auth-stdin
   
