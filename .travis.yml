@@ -3,9 +3,10 @@ node_js:
   - "node"
 install:
   - echo Hello
-  - wget https://github.com/github/codeql-action/releases/latest/download/codeql-bundle-linux64.tar.gz
-  - tar -xvzf ../codeql-bundle-linux64.tar.gz
   - pwd
-  - ls
+  - wget https://github.com/github/codeql-action/releases/latest/download/codeql-bundle-linux64.tar.gz
+  - ll
+  - tar -xvzf codeql-bundle-linux64.tar.gz
+  - ll
   - ./codeql resolve qlpacks
   
