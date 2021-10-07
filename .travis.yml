@@ -8,5 +8,5 @@ install:
   - ls -l
   - tar -xvzf codeql-bundle-linux64.tar.gz
   - ls -l
-  - ./codeql resolve qlpacks
+  - ./codeql/codeql resolve qlpacks
   
