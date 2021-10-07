@@ -5,8 +5,8 @@ install:
   - echo Hello
   - pwd
   - wget https://github.com/github/codeql-action/releases/latest/download/codeql-bundle-linux64.tar.gz
-  - ll
+  - ls -l
   - tar -xvzf codeql-bundle-linux64.tar.gz
-  - ll
+  - ls -l
   - ./codeql resolve qlpacks
   
