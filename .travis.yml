@@ -3,8 +3,9 @@ node_js:
   - "node"
 install:
   - echo Hello
-  - wget https://github.com/github/codeql-action/releases/latest/download/codeql-runner-linux
-  - chmod +x codeql-runner-linux
-  - echo "$GITHUBTOKEN" | ./codeql-runner-linux init --repository hassank-mapbox/testrepo --github-url https://github.com --github-auth-stdin
-  - echo "$GITHUBTOKEN" | ./codeql-runner-linux analyze --repository hassank-mapbox/testrepo --github-url https://github.com --github-auth-stdin
+  - wget https://github.com/github/codeql-action/releases/latest/download/codeql-bundle-linux64.tar.gz
+  - tar -xvzf ../codeql-bundle-linux64.tar.gz
+  - pwd
+  - ls
+  - ./codeql resolve qlpacks
   
