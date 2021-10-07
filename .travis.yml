@@ -4,11 +4,10 @@ node_js:
 install:
   - echo Hello
   - pwd
-  - wget https://github.com/github/codeql-action/releases/latest/download/codeql-bundle-linux64.tar.gz
+  - wget https://github.com/github/codeql-action/releases/latest/download/codeql-bundle-linux64.tar.gz -P ../
   - ls -l
-  - tar -xvzf codeql-bundle-linux64.tar.gz
+  - tar -xvzf ../codeql-bundle-linux64.tar.gz -C ../
   - ls -l
-  - ./codeql/codeql database create testrepo_codeqldb_js --language=javascript
-  - ./codeql/codeql database analyze testrepo_codeqldb_js javascript-code-scanning.qls --sarif-category=javascript --format=sarif-latest --output=testrepo-js.sarif  
-  - git rev-parse HEAD
-  - git rev-parse HEAD | ./codeql/codeql github upload-results --repository=hassank-mapbox/testrepo --ref=refs/heads/main --commit=`git rev-parse HEAD` --sarif=testrepo-js.sarif
+  - ../codeql/codeql database create ../testrepo_codeqldb_js --language=javascript
+  - ../codeql/codeql database analyze ../testrepo_codeqldb_js javascript-code-scanning.qls --sarif-category=javascript --format=sarif-latest --output=../testrepo-js.sarif  
+  - ../codeql/codeql github upload-results --repository=hassank-mapbox/testrepo --ref=refs/heads/main --commit=`git rev-parse HEAD` --sarif=../testrepo-js.sarif
