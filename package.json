@@ -1,14 +1,33 @@
 {
-  "name": "testdependabot",
+  "name": "webgl-help",
   "version": "1.0.0",
-  "description": "",
+  "description": "provide useful assistance to users with none or lacking webgl",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap test.js",
+    "docs": "documentation-readme README.md -s API"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/webgl-help.git"
+  },
+  "keywords": [
+    "webgl",
+    "test",
+    "support",
+    "help"
+  ],
+  "author": "Tom MacWright",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/webgl-help/issues"
+  },
+  "homepage": "https://github.com/mapbox/webgl-help#readme",
   "dependencies": {
-    "mongoose": "^1.0.16"
+    "ua-parser-js": "^0.7.2"
+  },
+  "devDependencies": {
+    "documentation-readme": "^2.1.0",
+    "tap": "^2.2.1"
   }
 }
